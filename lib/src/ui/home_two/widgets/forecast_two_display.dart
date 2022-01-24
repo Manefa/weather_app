@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:weather_app/src/domain/domain/fcst_day.dart';
 import 'package:weather_app/src/domain/domain/hourly_datum.dart';
 
-class ForeCastDisplay extends StatefulWidget {
+class ForeCastTwoDisplay extends StatefulWidget {
   final FcstDay? fcstDay;
-  const ForeCastDisplay({Key? key, this.fcstDay}) : super(key: key);
+  const ForeCastTwoDisplay({Key? key, this.fcstDay}) : super(key: key);
 
   @override
-  _ForeCastState createState() => _ForeCastState();
+  _ForeCastTwoState createState() => _ForeCastTwoState();
 }
 
-class _ForeCastState extends State<ForeCastDisplay> {
+class _ForeCastTwoState extends State<ForeCastTwoDisplay> {
   @override
   Widget build(BuildContext context) {
 

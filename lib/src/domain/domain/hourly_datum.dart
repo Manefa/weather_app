@@ -34,7 +34,7 @@ class HourlyDatum extends Equatable{
   final dynamic? humidex;
   final int? rh2M;
   final double? prmsl;
-  final int? apcPsfc;
+  final double? apcPsfc;
   final int? wndspd10M;
   final int? wndgust10M;
   final int? wnddir10M;

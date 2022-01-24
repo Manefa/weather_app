@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:weather_app/src/core/constants/color_constants.dart';
 import 'package:weather_app/src/domain/domain/fcst_day.dart';
 
-class NextDay extends StatelessWidget {
+class NextDayTwo extends StatelessWidget {
   final List<FcstDay> nextDays;
-  const NextDay({Key? key, required this.nextDays}) : super(key: key);
+  const NextDayTwo({Key? key, required this.nextDays}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
