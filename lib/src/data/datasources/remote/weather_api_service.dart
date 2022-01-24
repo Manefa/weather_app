@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
+import 'package:weather_app/src/core/exceptions/failures.dart';
 import 'package:weather_app/src/core/exceptions/request_exception.dart';
 import 'package:weather_app/src/core/platforms/dio_http_client/dio_http_client.dart';
 import 'package:weather_app/src/core/platforms/dio_http_client/http_data_source.dart';
@@ -14,7 +15,7 @@ class WeatherApiService extends HttpDataSource<DioHttpClient> {
       final responseJson = json.decode(json.encode(response));
       return WeatherModel.fromJson(responseJson);
     }on DioError catch (e){
-      throw RequestException(message: e.message);
+      throw Exception(e.message);
     }
   }
 
@@ -24,7 +25,7 @@ class WeatherApiService extends HttpDataSource<DioHttpClient> {
       final responseJson = json.decode(json.encode(response));
       return WeatherModel.fromJson(responseJson);
     }on DioError catch (e){
-      throw RequestException(message: e.message);
+      throw Exception(e.message);
     }
   }
 }

@@ -27,11 +27,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    getWeatherBloc.add(StartGetWeather());
     List<FcstDay> nextDay = [];
     Future<void> _refresh() async {
       nextDay.clear();
       getWeatherBloc.add(StartGetWeather());
     }
+
     return BlocProvider(
       create: (_) => getWeatherBloc,
       child: BlocListener(
